@@ -1,14 +1,14 @@
 from django import forms
 
 class StudentDataForm(forms.Form):
-    age = forms.IntegerField(label="Wiek", min_value=17, max_value=24)
+    age = forms.IntegerField(label="Wiek (17-24)", min_value=17, max_value=24)
     gender = forms.ChoiceField(label="Płeć", choices=[(0, 'Kobieta'), (1, 'Mężczyzna')])
-    study_hours_per_day = forms.FloatField(label="Godziny nauki dziennie", min_value=0, max_value=8.3)
-    social_media_hours = forms.FloatField(label="Godziny w mediach społecznościowych",min_value=0, max_value=7.2)
-    netflix_hours = forms.FloatField(label="Godziny oglądania Netflixa", min_value=0, max_value=5.4)
+    study_hours_per_day = forms.FloatField(label="Godziny nauki dziennie (0-8.3)", min_value=0, max_value=8.3)
+    social_media_hours = forms.FloatField(label="Godziny w mediach społecznościowych (0-7.2)",min_value=0, max_value=7.2)
+    netflix_hours = forms.FloatField(label="Godziny oglądania Netflixa (0-5.4)", min_value=0, max_value=5.4)
     part_time_job = forms.ChoiceField(label="Praca dorywcza", choices=[(0, 'Nie'), (1, 'Tak')])
-    attendance_percentage = forms.FloatField(label="Frekwencja (%)", min_value=56, max_value=100)
-    sleep_hours = forms.FloatField(label="Godziny snu na dobę", min_value=3.2, max_value=10)
+    attendance_percentage = forms.FloatField(label="Frekwencja% (56%-100%)", min_value=56, max_value=100)
+    sleep_hours = forms.FloatField(label="Godziny snu na dobę (3.2-10)", min_value=3.2, max_value=10)
     diet_quality = forms.ChoiceField(label="Jakość diety", choices=[
         (0, 'Średnia'),
         (1, 'Dobra'),
